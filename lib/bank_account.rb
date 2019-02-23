@@ -8,8 +8,7 @@ attr_reader :name, :broke, :closed
     def initialize(name)
         @name = name
         @balance = 1000
-        @status = 'open'
-        
+        @status = "open"
     end
 
     def deposit(balance)
@@ -33,6 +32,3 @@ attr_reader :name, :broke, :closed
     end
 
 end
-
-#steve_rogers = Hero.new(fbgdbf)
-#Theo_ba = BankAccount.new("nil")

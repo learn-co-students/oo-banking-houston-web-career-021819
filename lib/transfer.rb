@@ -1,9 +1,9 @@
-require_relative "./bank_account.rb"
 require "pry"
+require_relative "./bank_account.rb"
 
 class Transfer
 
-  attr_accessor :sender, :receiver, :status,:amount 
+  attr_accessor :sender, :receiver, :status, :amount 
   
   def initialize(sender,receiver,amount)
     @sender = sender
@@ -31,13 +31,12 @@ class Transfer
     end
   end
   
-  
-def reverse_transfer
-  if self.execute_transaction
-    @sender.balance = @sender.balance + @amount 
-    @receiver.balance = @receiver.balance - @amount
-    @status = "reversed" 
+  def reverse_transfer
+    if self.execute_transaction
+      @sender.balance = @sender.balance + @amount 
+      @receiver.balance = @receiver.balance - @amount
+      @status = "reversed" 
+    end
   end
-end
 
 end
